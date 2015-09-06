@@ -1,0 +1,4 @@
+com/mycompany/websocketexam/WebSocketMDB.class
+com/mycompany/websocketexam/WebSocketEndpoint.class
+com/mycompany/websocketexam/WSJMSMessage.class
+com/mycompany/websocketexam/QueueSenderSessionBean.class

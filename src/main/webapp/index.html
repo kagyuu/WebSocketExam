@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Start Page</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    </head>
+    <body>
+<h1>WebSocketテスト</h1>
+<div id="log">
+</div>
+<input id="msg" type="text"/>
+<button id="send">送信</button>        
+        
+<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+<script type="text/javascript">
+
+var socket = new WebSocket('ws://' + document.location.host + document.location.pathname +'websocket');
+
+socket.onmessage = function(message){
+    $('#log').append(message.data + "<br/>");
+};
+
+$('#send').click(function(){
+    var text = $('#msg').val();
+    socket.send(text);
+    $('#msg').val('');
+});
+</script>
+    </body>
+</html>
